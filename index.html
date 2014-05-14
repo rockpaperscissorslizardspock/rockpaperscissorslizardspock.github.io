@@ -9894,7 +9894,8 @@ $('#btr,#btp,#bts,#btl,#btk').click(function (event) {
 	if(wins+draws+loss > 1)
 		$('#btb').show();
 
-    var pc = event.srcElement.id.replace('bt', '');
+    var target = event.target || event.srcElement;
+    var pc = target.id.replace('bt', '');
 
     // compute choice
     var cc = prev_cc;
